@@ -37,10 +37,12 @@ def visit_library():
 
 	if option == '1':
 		book1 = input("which book you would like to get?")
+		book1 = book1.strip()
 		issue_book(book1)
 	
 	if option == '2':
 		book2 = input("which book you would like to return?")
+		book2 = book2.strip()
 		return_book(book2)
 
 	pprint(library) 
