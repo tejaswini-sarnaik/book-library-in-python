@@ -24,6 +24,24 @@ library['geography of indian subcontinent'] = 'available'
 
 pprint(library)
 
+# function to add book to library
+def add_book(book_name):
+	library[book_name] = 'available'
+
+add_book('bible')
+pprint(library)
+
+#function to remove book from library
+def remove_book(book_name):
+	library.pop(book_name)
+
+remove_book('vedic maths')
+pprint(library)
+
+remove_book('space exploration')
+pprint(library)
+
+
 # student gets book issued to them
 def issue_book(book_name):
 	library[book_name] = 'issued'
@@ -38,6 +56,7 @@ def visit_library():
 	if option == '1':
 		book1 = input("which book you would like to get?")
 		book1 = book1.strip()
+		print(f"book entered is {book1}")
 		issue_book(book1)
 	
 	if option == '2':
@@ -48,7 +67,7 @@ def visit_library():
 	pprint(library) 
 
 
-visit_library()
+#visit_library()
 
 
 
